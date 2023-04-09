@@ -26,8 +26,7 @@ body {
 /*--------------------*/
 
 /*Container*/
-.container {
-}
+.container {}
 
 .wrapper{
 	padding: 0 100px;
@@ -40,19 +39,51 @@ body {
 
 .header .wrapper {
 	position: relative;
-	padding-top: 40px;
+	padding-top: 50px;
 	padding-bottom: 40px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 	height: 100%;
 }
 
 .header {
-	background-image: url("/assets/img/background_3_1.jpg");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
 	height: 100vh;
+}
+
+.header__background {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.header__background > div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(1, 1, 1, 0.7);
+}
+
+.header__background video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.header__background img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.truck {
+	position: absolute;
+	left: 0;
+	bottom: -100px;
+}
+
+.truck img {
+	width: 115%;
+	height: 115%;
+	object-fit: contain;
 }
 
 .header__navigation {
@@ -62,12 +93,12 @@ body {
 }
 
 .logo {
-	width: 150px;
-	height: 65px;
+	width: 200px;
+	height: 200px;
 }
 
 .logo img {
-	object-fit: contain;
+	object-fit: cover;
 	height: 100%;
 	width: 100%;
 }
@@ -80,15 +111,24 @@ body {
 
 .menu_list {
 	display: flex;
-	font-size: 20px;
+	font-size: 32px;
 }
 
 .menu_item {
-	margin-left: 10px;
-	padding: 15px 30px;
-	border: 1px solid var(--orange);
+	margin-left: 6px;
+	padding:  30px 60px;
+	border: 4px solid var(--orange);
+	border-radius: 10px;
 	transition: all 0.4s ease;
 	cursor: pointer;
+}
+
+.menu_item:first-child {
+	border-bottom-left-radius: 60px;
+}
+
+.menu_item:last-child {
+	border-top-right-radius: 60px;
 }
 
 .menu_item:hover {
@@ -105,15 +145,22 @@ body {
 	color: white;
 }
 
-.header__info {
 
+/*--------------------------------------------------------------------------------------Header Text*/
+.header__info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: absolute;
+	top: 190px;
+	right: 100px;
 }
 
 .header__info h1,
 .header__info h2 {
-	font-family: 'Rubik Distressed';
+	font-family: 'Rubik Distressed', cursive;
 	font-weight: 400;
-	font-size: 70px;
+	font-size: 74px;
 	color: white;
 }
 
@@ -122,32 +169,85 @@ body {
 	color: var(--orange);
 }
 
+
+/*--------------------------------------------------------------------------------------Call Button*/
 .call__button {
 	position: absolute;
-	top: 180px;
-	right: 100px;
+	bottom: 70px;
+	right: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transform: rotate(5deg);
+	perspective: 1000px;
+}
+
+.call__button .rhomb {
 	display: flex;
 	align-items: center;
-	height: 200px;
-	width: 380px;
-	padding-right: 30px;
-	background-image: url('../assets/img/call_button_background_2.jpg');
+	height: 260px;
+	width: 260px;
+	background-image: url('../assets/img/yellow-road-sign-rhomb.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	clip-path: polygon(27% 0%, 100% 0%, 100% 100%, 27% 100%, 0% 50%);
+	cursor: pointer;
+	transform: rotate(45deg);
+	transition: transform 0.4s ease;
+	z-index: 1;
+}
+
+.call__button .rect {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 120px;
+	width: 348px;
+	background-image: url('../assets/img/yellow-road-sign-rect.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	cursor: pointer;
+	transition: transform 0.4s ease;
+	z-index: 2;
+}
+
+.call__button:hover .rhomb {
+	transform: rotate(45deg) rotate3d(1,1,0, -30deg);
+}
+
+.call__button:hover .rect {
+	transform: rotate(10deg) rotate3d(0,1,0, -30deg);
 }
 
 .call__button a {
-	font-family: 'Rubik Distressed';
+	font-family: 'Rubik Distressed', cursive;
 	color: black;
-	font-size: 40px;
 	font-weight: 400;
+	font-size: 36px;
+	text-align: center;
 	text-transform: uppercase;
-	text-align: right;
+	letter-spacing: -1px;
 }
 
-/*--------------------*/
+.call__button .rhomb a {
+	font-size: 38px;
+	transform: rotate(-45deg);
+}
+
+.call__button .stick {
+	position: absolute;
+	bottom: -90px;
+	width: 26px;
+	height: 100px;
+}
+
+.call__button .stick img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
 
 /*Main*/
 .main {
