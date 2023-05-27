@@ -1,0 +1,77 @@
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+header .wrapper {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.logo {
+    width: 220px;
+    height: 220px;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.menu_list {
+    display: flex;
+    font-size: 32px;
+}
+
+.menu_item {
+    position: relative;
+    isolation: isolate;
+    margin-left: 6px;
+    display: flex;
+    align-items: center;
+    padding:  0 48px;
+    height: 100px;
+    border-top: var(--border-12);
+    border-bottom: var(--border-12);
+    border-left: var(--border-1);
+    border-right: var(--border-1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.menu_item:first-child {
+    border-bottom: var(--border-12);
+    border-left: var(--border-12);
+    border-bottom-left-radius: 60px;
+}
+
+.menu_item:last-child {
+    border-top: var(--border-12);
+    border-right: var(--border-12);
+    border-top-right-radius: 60px;
+}
+
+.menu_item:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.menu_list a {
+    color: var(--orange);
+    transition: all 0.4s ease;
+}
+
+.menu_item:hover a {
+    color: white;
+}

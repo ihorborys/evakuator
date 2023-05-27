@@ -1,0 +1,19 @@
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+.copyright {
+    height: 100px;
+    padding-top: 10px;
+    text-align: center;
+    background-image: url("../assets/img/black-yellow-line.jpg");
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+.copyright span {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--asphalt);
+}

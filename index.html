@@ -5,40 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header__background">
-                <div></div>
-                <img src="assets/img/bg.jpg" alt="">
-            </div>
-            <div class="truck">
-                <img src="assets/img/tow-truck.png" alt="" />
-            </div>
+    <div class="root">
+        <header>
             <div class="wrapper">
-                <div class="header__navigation">
-                    <div class="logo">
-                        <img src="assets/img/tow-logo.png" alt="#">
-                    </div>
-                    <nav class="nav">
-                        <ul class="menu_list">
-                            <li class="menu_item">
-                                <a href="#" class="menu_link">Послуги</a>
-                            </li>
-                            <li class="menu_item">
-                                <a href="#" class="menu_link">Фотогалерея</a>
-                            </li>
-                            <li class="menu_item">
-                                <a href="#" class="menu_link">Контакти</a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="logo">
+                    <img src="assets/img/tow-logo.png" alt="#">
                 </div>
-                <div class="header__info">
-                    <h1>Послуги Евакуатора</h1>
-                    <h2 class="hq">Найвищої Якості</h2>
+                <nav class="nav">
+                    <ul class="menu_list">
+                        <li class="menu_item">
+                            <a href="#" class="menu_link">головна</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#" class="menu_link">фотогалерея</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#" class="menu_link">послуги</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#" class="menu_link">відгуки</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="home">
+                <div class="truck">
+                    <img src="assets/img/tow-truck.png" alt="" />
+                </div>
+                <div class="home__headers">
+                    <h1>послуги евакуатора</h1>
+                    <h2 class="hq">найвищої якості</h2>
                     <h2 class="h24">24/7</h2>
                 </div>
                 <div class="call__button">
@@ -48,23 +51,94 @@
                     <div class="rect">
                         <a href="#">(067)000-00-00</a>
                     </div>
-<!--                Road sign (call button) stick -->
-
-<!--                    <div class="stick">-->
-<!--                        <img src="assets/img/yellow-road-sign-stick.png" alt="">-->
-<!--                    </div>-->
                 </div>
-            </div>
-        </header>
-        <main class="main">
-            <div class="need__evakuator">
-            </div>
+            </section>
+            <section class="gallery">
+                <div class="slideshow" data-autoplay="true" data-stop-autoplay-on-hover="true">
+                    <ul class="slides"></ul>
+                    <div class="arrows">
+                        <button class="arrow arrow-prev">
+                            <i class="lni lni-angle-double-left"></i>
+                        </button>
+                        <button class="arrow arrow-next">
+                            <i class="lni lni-angle-double-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <h3>галерея</h3>
+            </section>
+            <section class="services">
+                <div class="towing">
+                    <h4>евакуатор</h4>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium explicabo ipsum iste suscipit velit vitae. Animi,
+                        architecto consequuntur corporis ea et illo illum iure laudantium
+                        maxime necessitatibus quaerat qui temporibus?</span>
+                </div>
+                <div class="mounting">
+                    <h4>маніпулятор</h4>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium explicabo ipsum iste suscipit velit vitae. Animi,
+                        architecto consequuntur corporis ea et illo illum iure laudantium
+                        maxime necessitatibus quaerat qui temporibus?</span>
+                </div>
+                <h3>послуги</h3>
+            </section>
+            <section class="testimonials">
+                <div class="wrapper">
+                    <ul class="testimonials_list">
+                        <li class="testimonials_item">
+                            <div class="testimonials_img">
+                                <img src="assets/img/testimonials-01.jpg" alt="">
+                            </div>
+                            <div class="testimonials_span">
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusantium explicabo ipsum iste suscipit velit vitae. Animi,
+                                    architecto consequuntur corporis ea et illo illum iure laudantium.</span>
+                            </div>
+                        </li>
+                        <li class="testimonials_item">
+                            <div class="testimonials_img">
+                                <img src="assets/img/testimonials-02.jpg" alt="">
+                            </div>
+                            <div class="testimonials_span">
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusantium explicabo ipsum iste suscipit velit vitae. Animi,
+                                    architecto consequuntur corporis ea et illo illum iure laudantium.</span>
+                            </div>
+                        </li>
+                        <li class="testimonials_item">
+                            <div class="testimonials_img">
+                                <img src="assets/img/testimonials-03.jpg" alt="">
+                            </div>
+                            <div class="testimonials_span">
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusantium explicabo ipsum iste suscipit velit vitae. Animi,
+                                    architecto consequuntur corporis ea et illo illum iure laudantium.</span>
+                            </div>
+                        </li>
+                        <li class="testimonials_item">
+                            <div class="testimonials_img">
+                                <img src="assets/img/testimonials-04.jpg" alt="">
+                            </div>
+                            <div class="testimonials_span">
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusantium explicabo ipsum iste suscipit velit vitae. Animi,
+                                    architecto consequuntur corporis ea et illo illum iure laudantium.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <h3>відгуки</h3>
+            </section>
         </main>
-        <footer class="footer">
-            <div class="footer__text">Ihor Borys © 2023</div>
+        <footer>
+            <div class="copyright">
+                <span>Ihor Borys © 2023</span>
+            </div>
         </footer>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>
