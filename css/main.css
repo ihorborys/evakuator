@@ -70,7 +70,6 @@ main h3::after {
 .home__headers h2 {
     font-family: 'Rubik Distressed', cursive;
     font-weight: 400;
-    font-size: 5rem;
     text-transform: capitalize;
     color: white;
     visibility: hidden;
@@ -78,6 +77,10 @@ main h3::after {
 
 .home__headers h1 {
     font-size: 7rem;
+}
+
+.home__headers h2 {
+    font-size: 5rem;
 }
 
 .home__headers h1,

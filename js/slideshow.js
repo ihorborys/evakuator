@@ -1,10 +1,12 @@
+const SLIDE_BASE_URL = "../assets/img/gallery/slide-";
+
 const slideshow = document.querySelector(".slideshow");
 const list = document.querySelector(".slides");
 const btns = document.querySelectorAll(".arrow");
 const nextBtn = document.querySelector(".arrow-next");
 const autoplayInterval = parseInt(slideshow.dataset.autoplayInterval) || 4000;
 const isActive = "is-active";
-const slidesCount = 5;
+const slidesCount = 9;
 let intervalID;
 
 export function initSlideshow() {
@@ -25,7 +27,7 @@ function initSlides() {
             slide.classList.add(isActive);
         }
         cover.classList.add("cover");
-        cover.style.backgroundImage = `url(../assets/img/slide-${i + 1}.jpg)`;
+        cover.style.backgroundImage = `url(${SLIDE_BASE_URL}${i + 1}.jpg)`;
         slide.append(cover);
         list.append(slide);
     }
