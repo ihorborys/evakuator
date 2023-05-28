@@ -35,7 +35,7 @@ function initSlides() {
 
 function changeSlide() {
     for (const btn of btns) {
-        btn.addEventListener("click", e => {
+        btn.addEventListener("pointerup", e => {
             const activeSlide = document.querySelector(".slide.is-active");
             activeSlide.classList.remove(isActive);
             if (e.currentTarget === nextBtn) {

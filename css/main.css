@@ -45,55 +45,11 @@ main h3::after {
     height: 100vh;
 }
 
-.truck {
-    position: absolute;
-    left: -40px;
-    bottom: -70px;
-}
-
-.truck img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.home__headers {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    top: 180px;
-    right: 100px;
-}
-
-.home__headers h1,
-.home__headers h2 {
-    font-family: 'Rubik Distressed', cursive;
-    font-weight: 400;
-    text-transform: capitalize;
-    color: white;
-    visibility: hidden;
-}
-
-.home__headers h1 {
-    font-size: 7rem;
-}
-
-.home__headers h2 {
-    font-size: 5rem;
-}
-
-.home__headers h1,
-.home__headers h2:last-child {
-    color: var(--orange);
-}
-
-
 /*--------------------------------------------------------------------------------------Call Button */
 .call__button {
     position: absolute;
-    bottom: 70px;
-    right: 350px;
+    bottom: 80px;
+    right: 380px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,8 +59,8 @@ main h3::after {
     visibility: hidden;
 }
 
-.call__button .rhomb,
-.call__button .rect {
+.rhombus,
+.rect {
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
@@ -113,7 +69,7 @@ main h3::after {
     transition: transform 0.4s ease;
 }
 
-.call__button .rhomb {
+.rhombus {
     height: 260px;
     width: 260px;
     background-image: url('../assets/img/yellow-road-sign-rhomb.png');
@@ -122,7 +78,7 @@ main h3::after {
     z-index: 1;
 }
 
-.call__button .rect {
+.rect {
     position: relative;
     bottom: 20px;
     justify-content: center;
@@ -133,7 +89,7 @@ main h3::after {
     z-index: 2;
 }
 
-.call__button:hover .rhomb {
+.call__button:hover .rhombus {
     transform: rotate(45deg) rotate3d(1,1,0, -30deg);
 }
 
@@ -151,7 +107,7 @@ main h3::after {
     letter-spacing: -2px;
 }
 
-.call__button .rhomb a {
+.rhombus a {
     font-size: 38px;
     transform: rotate(-45deg);
 }

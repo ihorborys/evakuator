@@ -1,6 +1,7 @@
-const truck = document.querySelector(".truck");
+const truck = document.querySelector(".truck > div");
 const callButton = document.querySelector(".call__button");
-const infoItemH1 = document.querySelector(".home__headers h1");
+const callButtonCont = document.querySelector(".call__button");
+const infoItemH1 = document.querySelector(".headers h1");
 const infoItemH2 = document.querySelector(".hq");
 const infoItemH3 = document.querySelector(".h24");
 const animationDutation = 0.8;

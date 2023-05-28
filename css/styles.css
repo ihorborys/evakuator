@@ -33,7 +33,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	perspective: 10px;
+	perspective: 100px;
 }
 
 span {
@@ -61,8 +61,72 @@ span {
 	background-repeat: repeat-y;
 	background-position: center;
 	background-size: cover;
-	transform: translateZ(-10px) scale(2);
+	transform: translateZ(-100px) scale(2);
 }
+
+
+/*--------------------------------------------------------------------------------------Truck */
+.truck {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100vh;
+	transform: translateZ(-50px) scale(1.5);
+}
+
+.truck > div {
+	position: absolute;
+	left: -40px;
+	bottom: -70px;
+}
+
+.truck img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+
+/*--------------------------------------------------------------------------------------Headers */
+.headers {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	transform: translateZ(-100px) scale(2);
+}
+
+.headers > div {
+	position: absolute;
+	top: 180px;
+	right: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.headers h1,
+.headers h2 {
+	font-family: 'Rubik Distressed', cursive;
+	font-weight: 400;
+	text-transform: capitalize;
+	color: white;
+	visibility: hidden;
+}
+
+.headers h1 {
+	font-size: 7rem;
+}
+
+.headers h2 {
+	font-size: 5rem;
+}
+
+.headers h1,
+.headers h2:last-child {
+	color: var(--orange);
+}
+
+
 
 
 /*--------------------------------------------------------------------------------------Animations */
