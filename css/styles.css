@@ -19,10 +19,6 @@
 	src: url('../assets/fonts/RubikDistressed-Regular.ttf');
 }
 
-html {
-	overflow: hidden;
-}
-
 body {
 	--orange: #fda929;
 	--asphalt: #373d42;
@@ -31,9 +27,7 @@ body {
 	--border-24: 24px solid var(--orange);
 	--border-radius: 100px;
 	font-family: 'Montserrat', sans-serif;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	perspective: 100px;
+	overflow: hidden;
 }
 
 span {
@@ -47,16 +41,23 @@ span {
 }
 
 .root {
+	position: static;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	perspective: 100px;
+}
+
+.container {
 	position: relative;
-	max-height: 2074px;
+	max-height: 929px;
 	transform-style: preserve-3d;
 }
 
-.root::before {
+.container::before {
 	content: "";
 	position: absolute;
 	width: 100vw;
-	height: 100%;
+	height: 2074px;
 	background-image: url("../assets/img/main-bg.png");
 	background-repeat: repeat-y;
 	background-position: center;
@@ -127,7 +128,33 @@ span {
 }
 
 
+/*--------------------------------------------------------------------------------------Hook */
+.hook {
+	position: fixed;
+	bottom: 50px; right: 0;
+	width: 200px;
+	height: 100vh;
+	transform: translateY(-100%);
+	transition: opacity 0.5s ease;
+	z-index: 90;
+}
 
+.hit_area {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 50%;
+	height: 160px;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+.hook img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: bottom;
+}
 
 /*--------------------------------------------------------------------------------------Animations */
 @keyframes truckSlideInFromLeft {
