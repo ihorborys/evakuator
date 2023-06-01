@@ -23,7 +23,7 @@ header .wrapper {
     object-fit: cover;
 }
 
-.nav {
+nav {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
@@ -67,4 +67,35 @@ header .wrapper {
     background-color: var(--orange);
     border-color: var(--orange);
     color: white;
+}
+
+
+/*--------------------------------------------------------------------------------------Responsiveness */
+@media (min-width: 360px) and (max-width: 575px) {
+    header .wrapper {
+        padding-top: 10px;
+    }
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+    nav {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
 }

@@ -20,12 +20,13 @@
 }
 
 body {
-	--orange: #fda929;
+	--orange: orange;
 	--asphalt: #373d42;
 	--border-1: 1px solid var(--orange);
 	--border-12: 12px solid var(--orange);
 	--border-24: 24px solid var(--orange);
-	--border-radius: 100px;
+	--radius-50: 50px;
+	--radius-100: 100px;
 	font-family: 'Montserrat', sans-serif;
 	overflow: hidden;
 }
@@ -49,20 +50,21 @@ span {
 
 .container {
 	position: relative;
-	max-height: 929px;
+	max-height: 100vh;
 	transform-style: preserve-3d;
 }
 
-.container::before {
-	content: "";
+.main_bg {
 	position: absolute;
+	bottom: 306%;
 	width: 100vw;
-	height: 2074px;
-	background-image: url("../assets/img/main-bg.png");
-	background-repeat: repeat-y;
-	background-position: center;
-	background-size: cover;
 	transform: translateZ(-100px) scale(2);
+}
+
+.main_bg img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 
@@ -135,7 +137,6 @@ span {
 	width: 200px;
 	height: 100vh;
 	transform: translateY(-100%);
-	transition: opacity 0.5s ease;
 	z-index: 90;
 }
 
@@ -170,15 +171,6 @@ span {
 	}
 }
 
-@keyframes callButtonSlideInFromBottom {
-	0% {
-		transform: translateY(100%) rotate(5deg);
-	}
-	100% {
-		transform: translateY(0) rotate(5deg);
-	}
-}
-
 @keyframes infoSlideInFromTop {
 	0% {
 		transform: translateY(-100%);
@@ -188,4 +180,68 @@ span {
 		transform: translateY(0);
 		opacity: 1;
 	}
+}
+
+
+/*--------------------------------------------------------------------------------------Responsiveness */
+@media (min-width: 360px) and (max-width: 575px) {
+	span {
+		font-weight: 400;
+		font-size: 1rem;
+	}
+	.wrapper{
+		padding: 0 10px;
+	}
+	.main_bg {
+		bottom: -40%;
+	}
+	.headers > div {
+		top: 320px;
+		left: 50%;
+		right: unset;
+		width: 100%;
+		align-items: center;
+		transform: translateX(-50%);
+	}
+	.headers h1 {
+		font-size: 3.5rem;
+		text-align: center;
+	}
+	.headers h2 {
+		margin-top: 10px;
+		font-size: 2rem;
+	}
+	.truck > div {
+		top: 50px;
+		left: -10px;
+		bottom: unset;
+	}
+	.truck img {
+		width: 95%;
+		height: 95%;
+	}
+	.hook {
+		bottom: 20px;
+		right: 16px;
+		width: 50px;
+	}
+	.hook img {
+		width: 200%;
+	}
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
 }

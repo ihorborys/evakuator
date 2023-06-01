@@ -92,3 +92,37 @@ button {
         opacity: 0;
     }
 }
+
+
+/*--------------------------------------------------------------------------------------Responsiveness */
+@media (min-width: 360px) and (max-width: 575px) and (orientation: portrait) {
+    .cover {
+        background-size: contain;
+        background-position: top;
+        height: 220px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 575px) and (orientation: landscape) {
+    .cover {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
