@@ -70,6 +70,55 @@ nav {
 }
 
 
+/*--------------------------------------------------------------------------------------Burger */
+.burger {
+    display: none;
+    position: relative;
+}
+
+.menu_toggle {
+    position: absolute;
+    right: 1.5rem;
+    top: 49%;
+    transform: translate(0, -50%);
+    height: 26px;
+    width: 29px;
+}
+
+.menu-toggle-bar {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--orange);
+    transition: all 0.3s ease;
+}
+
+.menu-toggle-bar--top {
+    transform: translate(0, -8px);
+}
+
+.menu-toggle-bar--bottom {
+    transform: translate(0, 8px);
+}
+
+.nav-open .menu-toggle-bar--top {
+    transform: translate(0, 0) rotate(45deg);
+}
+
+.nav-open .menu-toggle-bar--middle {
+    opacity: 0;
+}
+
+.nav-open .menu-toggle-bar--bottom {
+    transform: translate(0, 0) rotate(-45deg);
+}
+
+
 /*--------------------------------------------------------------------------------------Responsiveness */
 @media (min-width: 360px) and (max-width: 575px) {
     header .wrapper {
@@ -81,6 +130,9 @@ nav {
     }
     nav {
         display: none;
+    }
+    .burger {
+        display: block;
     }
 }
 
