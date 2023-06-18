@@ -351,10 +351,18 @@ main h3::after {
         font-size: 2.5rem;
     }
     .call-button {
-        bottom: 15px;
+        bottom: calc((10px + 2.5rem) * var(--rotation-koef) + var(--button-padding));
         left: 50%;
         right: unset;
-        transform: translateX(-50%) scale(0.5);
+        transform: translateX(-50%);
+    }
+    .road-sign {
+        height: 130px;
+        width: 130px;
+    }
+    .call-button a {
+        font-size: 18px;
+        letter-spacing: -1px;
     }
     .gallery h3 {
         left: 10px;
@@ -436,10 +444,10 @@ main h3::after {
 
     @keyframes callButtonSlideInFromBottom {
         0% {
-            transform: translateY(100%) translateX(-50%) scale(0.5);
+            transform: translateY(100%) translateX(-50%);
         }
         100% {
-            transform: translateY(0) translateX(-50%) scale(0.5);
+            transform: translateY(0) translateX(-50%);
         }
     }
 }

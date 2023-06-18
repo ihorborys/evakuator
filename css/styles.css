@@ -27,6 +27,8 @@ body {
 	--border-24: 24px solid var(--orange);
 	--radius-50: 50px;
 	--radius-100: 100px;
+	--rotation-koef: 1.4143;
+	--button-padding: 20px;
 	font-family: 'Montserrat', sans-serif;
 	overflow: hidden;
 }
@@ -71,7 +73,6 @@ span {
 /*--------------------------------------------------------------------------------------Truck */
 .truck {
 	position: absolute;
-	top: 0; left: 0;
 	width: 100%;
 	height: 100vh;
 	transform: translateZ(-50px) scale(1.5);
@@ -199,33 +200,44 @@ span {
 	.main-bg {
 		bottom: -40%;
 	}
-	.info-panel > div {
-		top: 320px;
-		left: 50%;
-		right: unset;
-		width: 100%;
-		align-items: center;
-		transform: translateX(-50%);
-	}
-	.info-panel h1 {
-		font-size: 3.5rem;
-		text-align: center;
-	}
-	.info-panel h2 {
-		margin-top: 10px;
-		font-size: 2rem;
+	.truck {
+		top: 50px;
 	}
 	.truck > div {
-		top: 50px;
-		left: -10px;
-		bottom: unset;
+		position: unset;
 	}
 	.truck img {
 		width: 95%;
 		height: 95%;
 	}
+	.info-panel {
+		bottom: 0;
+		justify-content: flex-end;
+		padding-top: 0;
+		padding-right: 0;
+	}
+	.headers {
+		height: unset;
+		align-items: center;
+		margin-bottom: calc(130px * var(--rotation-koef) + var(--button-padding));
+	}
+	.headers h1 {
+		font-size: 3.5rem;
+		text-align: center;
+	}
+	.headers h2 {
+		margin-top: 10px;
+		font-size: 2rem;
+	}
+	.phone {
+		width: 100%;
+	}
+	.phone h2 {
+		font-size: 2.5rem;
+		text-align: center;
+	}
 	.hook {
-		bottom: 35px;
+		bottom: 30px;
 		right: 10px;
 		width: 30px;
 	}
