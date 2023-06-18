@@ -9,7 +9,7 @@ const gallery = document.querySelector(".gallery");
 const services = document.querySelector(".services");
 const testimonials = document.querySelector(".testimonials");
 const hook = document.querySelector(".hook");
-const hookHitArea = document.querySelector(".hit_area");
+const hookHitArea = document.querySelector(".hit-area");
 const sections = [gallery, services, testimonials];
 let hookInitialTranslateY = 0;
 

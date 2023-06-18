@@ -38,29 +38,16 @@ main h3::after {
 }
 
 
-/*--------------------------------------------------------------------------------------Home */
-.home {
-    position: relative;
-    isolation: isolate;
-    height: 100vh;
-}
-
 /*--------------------------------------------------------------------------------------Call Button */
-.call__button {
+.call-button {
     position: absolute;
-    bottom: 80px;
+    bottom: calc(110px + 10px + 6rem);
     right: 380px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: rotate(5deg);
-    transform-origin: bottom center;
     perspective: 1000px;
     visibility: hidden;
 }
 
-.rhombus,
-.rect {
+.road-sign {
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
@@ -69,7 +56,7 @@ main h3::after {
     transition: transform 0.4s ease;
 }
 
-.rhombus {
+.road-sign {
     height: 260px;
     width: 260px;
     background-image: url('../assets/img/yellow-road-sign-rhomb.png');
@@ -78,26 +65,11 @@ main h3::after {
     z-index: 1;
 }
 
-.rect {
-    position: relative;
-    bottom: 20px;
-    justify-content: center;
-    height: 120px;
-    width: 348px;
-    background-image: url('../assets/img/yellow-road-sign-rect.png');
-    background-size: 100%;
-    z-index: 2;
-}
-
-.call__button:hover .rhombus {
+.call-button:hover .road-sign {
     transform: rotate(45deg) rotate3d(1,1,0, -30deg);
 }
 
-.call__button:hover .rect {
-    transform: rotate(10deg) rotate3d(0,1,0, -30deg);
-}
-
-.call__button a {
+.call-button a {
     font-family: 'Rubik Distressed', cursive;
     color: black;
     font-weight: 400;
@@ -107,9 +79,17 @@ main h3::after {
     letter-spacing: -2px;
 }
 
-.rhombus a {
+.road-sign a {
     font-size: 38px;
     transform: rotate(-45deg);
+}
+
+
+/*--------------------------------------------------------------------------------------Home */
+.home {
+    position: relative;
+    isolation: isolate;
+    height: 100vh;
 }
 
 
@@ -357,10 +337,10 @@ main h3::after {
 /*--------------------------------------------------------------------------------------Animations */
 @keyframes callButtonSlideInFromBottom {
     0% {
-        transform: translateY(100%) rotate(5deg);
+        transform: translateY(100%);
     }
     100% {
-        transform: translateY(0) rotate(5deg);
+        transform: translateY(0);
     }
 }
 
@@ -370,7 +350,7 @@ main h3::after {
     main h3 {
         font-size: 2.5rem;
     }
-    .call__button {
+    .call-button {
         bottom: 15px;
         left: 50%;
         right: unset;

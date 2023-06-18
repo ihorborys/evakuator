@@ -54,14 +54,14 @@ span {
 	transform-style: preserve-3d;
 }
 
-.main_bg {
+.main-bg {
 	position: absolute;
 	bottom: 306%;
 	width: 100vw;
 	transform: translateZ(-100px) scale(2);
 }
 
-.main_bg img {
+.main-bg img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
@@ -90,25 +90,30 @@ span {
 }
 
 
-/*--------------------------------------------------------------------------------------Headers */
-.headers {
+/*--------------------------------------------------------------------------------------Info Panel */
+.info-panel {
 	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-top: 180px;
+	padding-right: 100px;
+	padding-bottom: 10px;
 	width: 100%;
 	height: 100vh;
 	transform: translateZ(-100px) scale(2);
 }
 
-.headers > div {
-	position: absolute;
-	top: 180px;
-	right: 100px;
+.headers {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 }
 
 .headers h1,
-.headers h2 {
+.headers h2,
+.phone h2 {
 	font-family: 'Rubik Distressed', cursive;
 	font-weight: 400;
 	text-transform: capitalize;
@@ -116,17 +121,18 @@ span {
 	visibility: hidden;
 }
 
-.headers h1 {
+.headers h1,
+.phone h2 {
 	font-size: 7rem;
+	color: var(--orange);
 }
 
 .headers h2 {
 	font-size: 5rem;
 }
 
-.headers h1,
-.headers h2:last-child {
-	color: var(--orange);
+.phone h2 {
+	visibility: visible;
 }
 
 
@@ -140,7 +146,7 @@ span {
 	z-index: 90;
 }
 
-.hit_area {
+.hit-area {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -190,10 +196,10 @@ span {
 	.wrapper{
 		padding: 0 10px;
 	}
-	.main_bg {
+	.main-bg {
 		bottom: -40%;
 	}
-	.headers > div {
+	.info-panel > div {
 		top: 320px;
 		left: 50%;
 		right: unset;
@@ -201,11 +207,11 @@ span {
 		align-items: center;
 		transform: translateX(-50%);
 	}
-	.headers h1 {
+	.info-panel h1 {
 		font-size: 3.5rem;
 		text-align: center;
 	}
-	.headers h2 {
+	.info-panel h2 {
 		margin-top: 10px;
 		font-size: 2rem;
 	}
@@ -223,7 +229,7 @@ span {
 		right: 10px;
 		width: 30px;
 	}
-	.hit_area {
+	.hit-area {
 		height: 100px;
 	}
 }
