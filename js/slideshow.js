@@ -1,4 +1,4 @@
-const SLIDE_BASE_URL = "../assets/img/gallery/slide-";
+const SLIDE_BASE_URL = "assets/img/gallery/slide-";
 
 const slideshow = document.querySelector(".slideshow");
 const list = document.querySelector(".slides");
