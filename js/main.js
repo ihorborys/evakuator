@@ -7,16 +7,27 @@ const home = document.querySelector(".home");
 const gallery = document.querySelector(".gallery");
 const services = document.querySelector(".services");
 const testimonials = document.querySelector(".testimonials");
+const footer = document.querySelector("footer");
 const hook = document.querySelector(".hook");
 const hookHitArea = document.querySelector(".hit-area");
 const sections = [gallery, services, testimonials];
 let hookInitialTranslateY = 0;
 
 window.addEventListener("load", () => {
+    setHookInitialTranslateY();
     startHeaderAnimationSequence();
     initSlideshow();
-    setHookInitialTranslateY();
 });
+
+function setHookInitialTranslateY() {
+    hookInitialTranslateY = getTranslateY(hook);
+}
+
+function getTranslateY(element) {
+    const style = window.getComputedStyle(element);
+    const matrix = new DOMMatrixReadOnly(style.transform);
+    return matrix.m42;
+}
 
 root.addEventListener("scroll", () => {
     const currentTranslateY = (root.scrollTop / (root.scrollHeight + hookInitialTranslateY)) * 100;
@@ -33,13 +44,3 @@ sections.forEach((section) => {
 hookHitArea.addEventListener("pointerup", () => {
     home.scrollIntoView({ behavior: "smooth" });
 });
-
-function setHookInitialTranslateY() {
-    hookInitialTranslateY = getTranslateY(hook);
-}
-
-function getTranslateY(element) {
-    const style = window.getComputedStyle(element);
-    const matrix = new DOMMatrixReadOnly(style.transform);
-    return matrix.m42;
-}

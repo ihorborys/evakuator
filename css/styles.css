@@ -94,7 +94,7 @@ span {
 /*--------------------------------------------------------------------------------------Hook */
 .hook {
 	position: fixed;
-	bottom: 0; right: 50px;
+	bottom: 50px; right: 50px;
 	width: 90px;
 	height: 100vh;
 	transform: translateY(-100%);
@@ -116,6 +116,7 @@ span {
 	object-position: bottom;
 }
 
+
 /*--------------------------------------------------------------------------------------Animations */
 @keyframes truckSlideInFromLeft {
 	0% {
@@ -127,17 +128,6 @@ span {
 	}
 	100% {
 		transform: translateX(0);
-	}
-}
-
-@keyframes infoSlideInFromTop {
-	0% {
-		transform: translateY(-100%);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
 	}
 }
 
@@ -165,7 +155,6 @@ span {
 		height: 95%;
 	}
 	.hook {
-		bottom: 30px;
 		right: 10px;
 		width: 30px;
 	}

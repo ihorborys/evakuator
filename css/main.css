@@ -62,8 +62,7 @@ main h3::after {
 }
 
 .headers h1,
-.headers h2,
-.phone h2 {
+.headers h2 {
     font-family: 'Rubik Distressed', cursive;
     font-weight: 400;
     text-transform: capitalize;
@@ -81,8 +80,15 @@ main h3::after {
     font-size: 5rem;
 }
 
+.phone {
+    visibility: hidden;
+}
+
 .phone h2 {
-    visibility: visible;
+    font-family: 'Rubik Distressed', cursive;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--orange);
 }
 
 .call-button {
@@ -90,24 +96,6 @@ main h3::after {
     margin-bottom: 50px;
     perspective: 1000px;
     visibility: hidden;
-}
-
-.road-sign {
-    display: flex;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    transition: transform 0.4s ease;
-}
-
-.road-sign {
-    height: 260px;
-    width: 260px;
-    background-image: url('../assets/img/yellow-road-sign-rhomb.png');
-    background-size: cover;
-    transform: rotate(45deg);
-    z-index: 1;
 }
 
 .call-button:hover .road-sign {
@@ -122,6 +110,21 @@ main h3::after {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: -2px;
+}
+
+.road-sign {
+    height: 260px;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/img/yellow-road-sign-rhomb.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: rotate(45deg);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .road-sign a {
@@ -372,12 +375,43 @@ main h3::after {
 
 
 /*--------------------------------------------------------------------------------------Animations */
-@keyframes callButtonSlideInFromBottom {
+@keyframes infoSlideInFromTop {
     0% {
-        transform: translateY(100%);
+        transform: translateY(-100%);
+        opacity: 0;
     }
     100% {
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes phoneSlideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes callButtonScaleUp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes roadSignRotation {
+    0% {
+        transform: rotate(665deg);
+    }
+    100% {
+        transform: rotate(45deg);
     }
 }
 
