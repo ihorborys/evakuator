@@ -133,10 +133,6 @@ span {
 
 
 /*--------------------------------------------------------------------------------------Responsiveness */
-@media (min-height: 640px) and (max-width: 740px) {
-
-}
-
 @media (min-width: 360px) and (max-width: 575px) {
 	span {
 		font-weight: 400;
@@ -164,6 +160,12 @@ span {
 	}
 	.hit-area {
 		height: 100px;
+	}
+}
+
+@media (min-height: 600px) and (max-height: 680px) {
+	.truck {
+		width: 90%;
 	}
 }
 

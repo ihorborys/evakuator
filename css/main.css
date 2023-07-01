@@ -543,13 +543,13 @@ main h3::after {
     }
 }
 
-@media (min-width: 360px) and (max-height: 640px) {
+@media (min-height: 600px) and (max-height: 680px) {
     .call-button a {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
     }
     .road-sign {
-        height: 115px;
-        width: 115px;
+        height: 110px;
+        width: 110px;
     }
 }
 
