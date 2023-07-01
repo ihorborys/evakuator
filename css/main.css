@@ -38,11 +38,56 @@ main h3::after {
 }
 
 
-/*--------------------------------------------------------------------------------------Call Button */
+/*--------------------------------------------------------------------------------------Home */
+.home {
+    position: relative;
+    isolation: isolate;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.info-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 180px 100px 10px 0;
+}
+
+.headers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.headers h1,
+.headers h2,
+.phone h2 {
+    font-family: 'Rubik Distressed', cursive;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: white;
+    visibility: hidden;
+}
+
+.headers h1,
+.phone h2 {
+    font-size: 7rem;
+    color: var(--orange);
+}
+
+.headers h2 {
+    font-size: 5rem;
+}
+
+.phone h2 {
+    visibility: visible;
+}
+
 .call-button {
-    position: absolute;
-    bottom: calc(110px + 10px + 6rem);
-    right: 380px;
+    margin-right: 300px;
+    margin-bottom: 50px;
     perspective: 1000px;
     visibility: hidden;
 }
@@ -82,14 +127,6 @@ main h3::after {
 .road-sign a {
     font-size: 38px;
     transform: rotate(-45deg);
-}
-
-
-/*--------------------------------------------------------------------------------------Home */
-.home {
-    position: relative;
-    isolation: isolate;
-    height: 100vh;
 }
 
 
@@ -350,18 +387,39 @@ main h3::after {
     main h3 {
         font-size: 2.5rem;
     }
+    .home {
+        align-items: flex-end;
+    }
+    .info-panel {
+        padding: 0;
+        padding-bottom: 10px;
+        height: 60%;
+        align-items: center;
+    }
+    .headers {
+        align-items: center;
+    }
+    .headers h1 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    .headers h2 {
+        margin-top: 10px;
+        font-size: 2rem;
+    }
+    .phone h2 {
+        font-size: 2.5rem;
+    }
     .call-button {
-        bottom: calc((10px + 2.5rem) * var(--rotation-koef) + var(--button-padding));
-        left: 50%;
-        right: unset;
-        transform: translateX(-50%);
+        margin-right: 0;
+        margin-bottom: 0;
     }
     .road-sign {
-        height: 130px;
-        width: 130px;
+        height: 150px;
+        width: 150px;
     }
     .call-button a {
-        font-size: 18px;
+        font-size: 1.5rem;
         letter-spacing: -1px;
     }
     .gallery h3 {
@@ -441,14 +499,24 @@ main h3::after {
     .testimonials_span {
         padding: 12px 24px 12px 12px;
     }
+}
 
-    @keyframes callButtonSlideInFromBottom {
-        0% {
-            transform: translateY(100%) translateX(-50%);
-        }
-        100% {
-            transform: translateY(0) translateX(-50%);
-        }
+@media (min-width: 390px) and (max-width: 575px) {
+    .headers h1 {
+        font-size: 4rem;
+    }
+    .headers h2 {
+        font-size: 2.5rem;
+    }
+    .phone h2 {
+        font-size: 3rem;
+    }
+    .road-sign {
+        height: 170px;
+        width: 170px;
+    }
+    .call-button a {
+        font-size: 1.75rem;
     }
 }
 

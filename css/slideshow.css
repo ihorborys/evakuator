@@ -41,7 +41,7 @@ button {
     position: relative;
     display: flex;
     align-items: center;
-    width: 20%;
+    width: 15%;
     cursor: pointer;
     overflow: inherit;
 }
@@ -50,7 +50,7 @@ button {
     position: absolute;
     font-size: 80px;
     color: var(--orange);
-    animation: pulsate 2.5s ease-out;
+    animation: pulsation 2.5s ease-out;
     animation-iteration-count: infinite;
 }
 
@@ -81,7 +81,7 @@ button {
 }
 
 
-@keyframes pulsate {
+@keyframes pulsation {
     0% {
         opacity: 0;
     }
@@ -97,9 +97,8 @@ button {
 /*--------------------------------------------------------------------------------------Responsiveness */
 @media (min-width: 360px) and (max-width: 575px) and (orientation: portrait) {
     .cover {
-        background-size: contain;
         background-position: top;
-        height: 220px;
+        height: 75vh;
     }
 }
 
