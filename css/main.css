@@ -448,13 +448,13 @@ main h3::after {
         margin-right: 0;
         margin-bottom: 0;
     }
-    .road-sign {
-        height: 150px;
-        width: 150px;
-    }
     .call-button a {
         font-size: 1.5rem;
         letter-spacing: -1px;
+    }
+    .road-sign {
+        height: 150px;
+        width: 150px;
     }
     .gallery h3 {
         left: 10px;
@@ -532,6 +532,16 @@ main h3::after {
     }
     .testimonials_span {
         padding: 12px 24px 12px 12px;
+    }
+}
+
+@media (min-width: 360px) and (min-height: 640px) {
+    .call-button a {
+        font-size: 1.25rem;
+    }
+    .road-sign {
+        height: 115px;
+        width: 115px;
     }
 }
 
