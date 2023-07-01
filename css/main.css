@@ -98,10 +98,6 @@ main h3::after {
     visibility: hidden;
 }
 
-.call-button:hover .road-sign {
-    transform: rotate(45deg) rotate3d(1,1,0, -30deg);
-}
-
 .call-button a {
     font-family: 'Rubik Distressed', cursive;
     color: black;
@@ -406,12 +402,24 @@ main h3::after {
     }
 }
 
-@keyframes roadSignRotation {
+@keyframes roadSignRotationOnLoad {
     0% {
         transform: rotate(665deg);
     }
     100% {
         transform: rotate(45deg);
+    }
+}
+
+@keyframes roadSignRotationOnTap {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        transform: rotate(45deg) scale(0.9);
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
     }
 }
 
@@ -535,13 +543,23 @@ main h3::after {
     }
 }
 
-@media (min-width: 360px) and (min-height: 640px) {
+@media (min-width: 360px) and (max-height: 640px) {
     .call-button a {
         font-size: 1.25rem;
     }
     .road-sign {
         height: 115px;
         width: 115px;
+    }
+}
+
+@media (min-width: 375px) and (max-height: 680px) {
+    .call-button a {
+        font-size: 1.25rem;
+    }
+    .road-sign {
+        height: 120px;
+        width: 120px;
     }
 }
 

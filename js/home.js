@@ -30,8 +30,8 @@ function playPhoneAnimation() {
 
 function playCallButtonAnimation() {
     callButton.style.visibility = "visible";
-    callButton.style.animation = `${animationDutation}s ease-out 0s 1 callButtonScaleUp`;
-    roadSign.style.animation = `${animationDutation}s ease-out 0s 1 roadSignRotation`;
+    callButton.style.animation = `${halfAnimationDuration}s ease-out 0s 1 callButtonScaleUp`;
+    roadSign.style.animation = `${halfAnimationDuration}s ease-out 0s 1 roadSignRotationOnLoad`;
 }
 
 truck.onanimationend = () => {
@@ -47,3 +47,11 @@ infoItemH1.onanimationend = () => {
 infoItemH3.onanimationend = () => {
     playCallButtonAnimation();
 };
+
+roadSign.addEventListener("pointerup", (e) => {
+    roadSign.style.animation = `${animationDutation / 4}s ease-out 0s 1 roadSignRotationOnTap`;
+});
+
+roadSign.onanimationend = () => {
+    roadSign.style.animation = "";
+}
