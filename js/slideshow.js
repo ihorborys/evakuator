@@ -1,4 +1,8 @@
-const SLIDE_BASE_URL = "assets/img/gallery/slide-";
+const ghPagesRootURL = "https://boobzzz.github.io/towing-services/";
+const gallerySlideUrl = "assets/img/gallery/slide-";
+const SLIDE_BASE_URL = window.location.origin === ghPagesRootURL
+    ? ghPagesRootURL + gallerySlideUrl
+    : gallerySlideUrl;
 
 const slideshow = document.querySelector(".slideshow");
 const list = document.querySelector(".slides");
