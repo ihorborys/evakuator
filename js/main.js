@@ -1,9 +1,8 @@
+import "./header.js";
 import { startHeaderAnimationSequence } from "./home.js";
 import { initSlideshow } from "./slideshow.js";
 
 const root = document.querySelector(".root");
-const burgerContainer = document.querySelector("header .wrapper");
-const menu = document.querySelector(".menu_toggle");
 const home = document.querySelector(".home");
 const gallery = document.querySelector(".gallery");
 const services = document.querySelector(".services");
@@ -24,12 +23,8 @@ root.addEventListener("scroll", () => {
     hook.style.transform = `translateY(${currentTranslateY - 100}%)`;
 });
 
-menu.addEventListener("pointerup", () => {
-    burgerContainer.classList.toggle("nav-open");
-});
-
 sections.forEach((section) => {
-    const button = document.querySelector("." + section.className + "_btn");
+    const button = document.querySelector("." + section.className + "-btn");
     button.addEventListener("pointerup", () => {
         section.scrollIntoView({ behavior: "smooth" });
     });
